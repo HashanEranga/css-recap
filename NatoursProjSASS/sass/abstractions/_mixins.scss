@@ -1,0 +1,12 @@
+@mixin header-text-stye($disp, $fsize, $fweight, $lspacing) {
+    display: $disp;
+    font-size: $fsize;
+    font-weight: $fweight;
+    letter-spacing: $lspacing;
+}
+
+@mixin add-animation($ani-name, $ani-duration, $ani-time-func) {
+    animation-name: $ani-name;
+    animation-duration: $ani-duration;
+    animation-timing-function: $ani-time-func;
+}
