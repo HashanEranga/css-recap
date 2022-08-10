@@ -5,6 +5,18 @@ $color-white : #fff;
 $color-dark : #777;
 $color-black : #000;
 
+@mixin header-text-stye($disp, $fsize, $fweight, $lspacing) {
+    display: $disp;
+    font-size: $fsize;
+    font-weight: $fweight;
+    letter-spacing: $lspacing;
+}
+
+@mixin add-animation($ani-name, $ani-duration, $ani-time-func) {
+    animation-name: $ani-name;
+    animation-duration: $ani-duration;
+    animation-timing-function: $ani-time-func;
+}
 
 /* browser rest */
 * {
@@ -75,28 +87,18 @@ body {
 
 .heading-primary-main {
     /* because of span already have display inline */
-    display: block;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: 3.5rem;
-
+    @include header-text-stye(block, 6rem, 700, 3.5rem);
+    
     /* use the animation */
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    @include add-animation(moveInLeft, 1s, ease-out)
 }
 
 .heading-primary-sub {
     /* same span classes already have diplay as block */
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.75rem;
+    @include header-text-stye(block, 2rem, 400, 1.75rem);
     
     /* use the animation */
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    @include add-animation(moveInRight, 1s, ease-out)
 }
 
 /* defined the animation */
