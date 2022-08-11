@@ -1,7 +1,6 @@
 .row {
     // max-width same for more than width less than will reduce
     max-width: $grid-width;
-    background-color: #eee;
     
     // for center blocks
     margin: 0 auto;
@@ -14,7 +13,6 @@
     @include clear-fix;
 
     [class^="col-"]{
-        background-color: orangered;
         float: left;
         
         &:not(:last-child){
