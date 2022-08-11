@@ -72,6 +72,41 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out; }
 
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(../images/slbeach.jpg);
+  background-size: cover;
+  background-position: top;
+  /* using clip path for creating a polygon  */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* logo box will refenrence to this relative position this will be the origin */
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 10rem; }
+  .header__main-text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #eee; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-of-2 {
+    width: calc((100%-6rem)/2);
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+
 /* once the btn clicked the link will purple those are removed here */
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -114,25 +149,3 @@ body {
 .btn-animated {
   animation: moveInBtn .5s ease-out .75s;
   animation-fill-mode: backwards; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(../images/slbeach.jpg);
-  background-size: cover;
-  background-position: top;
-  /* using clip path for creating a polygon  */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* logo box will refenrence to this relative position this will be the origin */
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 10rem; }
-  .header__main-text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
