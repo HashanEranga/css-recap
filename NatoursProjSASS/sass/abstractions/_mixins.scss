@@ -10,3 +10,11 @@
     animation-duration: $ani-duration;
     animation-timing-function: $ani-time-func;
 }
+
+@mixin clear-fix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
